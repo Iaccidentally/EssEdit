@@ -7,6 +7,7 @@ package com.github.iaccidentally.ecm.commands;
 
 import com.github.iaccidentally.ecm.CommandManager;
 import com.github.iaccidentally.ecm.configuration.Configuration;
+import com.github.iaccidentally.ecm.configuration.Language;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.command.Command;
@@ -19,6 +20,7 @@ import org.bukkit.util.BlockVector;
  * @author Whisk
  */
 public class Util {
+    private static String message;
 
     public static void log(String string) {
         throw new UnsupportedOperationException("Not yet implemented");
@@ -89,9 +91,29 @@ public class Util {
         else return false;
     }
     
-    public static void sendMessage(String message) {
+    public static void sendMessage(String message)
+    {
         CommandSender sender = CommandManager.getSender();
         sender.sendMessage(message);
+    }
+
+
+    public static void sendSuccess(String string)
+    {
+        CommandSender sender = CommandManager.getSender();
+        String title = Language.getString("general.title");
+        sender.sendMessage(ChatColor.GREEN + "[" + title + "]" + ChatColor.WHITE + message);
+    }
+    
+    public static void sendDenied(String[] args)
+    {
+        CommandSender sender = CommandManager.getSender();
+        String title = Language.getString("general.title");
+        String message = Language.getString("general.access-denied");
+        String command = "";
+        for(int i = 0; i < args.length; i++)
+            command = command + " " + args[i];
+        log(sender.getName() + " was denied to use a command (/" + command + ")");
     }
 
 }
