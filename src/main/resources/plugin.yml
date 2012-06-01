@@ -1,5 +1,5 @@
 name: ECM
-main: com.github.Iaccidentally.ECM.ECM
+main: com.github.iaccidentally.ecm.ECM
 version: 0.1a
 website:
 authors: [Iaccidentally, Whisk, gravypod, chrisward]
