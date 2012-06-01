@@ -1,8 +1,8 @@
 name: ECM
-main: com.github.Iaccidentally.ECM.ECM
-version: 0.01a
+main: com.github.iaccidentally.ecm.ECM
+version: 0.1a
 website:
-authors: [Iaccidentally, Whisk]
+authors: [Iaccidentally, Whisk, gravypod, chrisward]
 commands:
    adduser:
       description: adds a user so they can use editing functions.
