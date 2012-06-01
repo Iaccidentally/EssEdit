@@ -4,10 +4,8 @@
 
   <groupId>com.github.Iaccidentally</groupId>
   <artifactId>ECM</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.1a-SNAPSHOT</version>
   <packaging>jar</packaging>
-
-  <name>ECM</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -33,4 +31,6 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+    <name>EssEdit</name>
+    <description>This is a VERY early alpha build, testing some minimal things.</description>
 </project>
