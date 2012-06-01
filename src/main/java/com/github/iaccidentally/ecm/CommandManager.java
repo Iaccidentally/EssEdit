@@ -5,6 +5,7 @@
 package com.github.iaccidentally.ecm;
 
 import com.github.iaccidentally.ecm.commands.Util;
+import javax.tools.JavaFileManager;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -19,6 +20,10 @@ public class CommandManager {
     private static ECM plugin;
     
     private static Location[] loc = {null, null};
+
+    public static void setLocation(JavaFileManager.Location loc, int i) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
     
     public CommandManager(ECM plugin) {
         CommandManager.plugin = plugin;
