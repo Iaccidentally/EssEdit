@@ -7,6 +7,7 @@ package com.github.iaccidentally.ecm.commands;
 
 import com.github.iaccidentally.ecm.CommandManager;
 import com.github.iaccidentally.ecm.configuration.Configuration;
+import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -92,4 +93,5 @@ public class Util {
         CommandSender sender = CommandManager.getSender();
         sender.sendMessage(message);
     }
+
 }
