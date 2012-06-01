@@ -1,6 +1,6 @@
 name: ECM
 main: com.github.Iaccidentally.ECM.ECM
-version: 0.01a
+version: 0.1a
 website:
 authors: [Iaccidentally, Whisk]
 commands:
