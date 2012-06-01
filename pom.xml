@@ -4,7 +4,7 @@
 
   <groupId>com.github.Iaccidentally</groupId>
   <artifactId>ECM</artifactId>
-  <version>0.1a-SNAPSHOT</version>
+  <version>0.0.2a-SNAPSHOT</version>
   <packaging>jar</packaging>
   <url>http://maven.apache.org</url>
 
