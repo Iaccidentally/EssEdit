@@ -4,12 +4,11 @@
  */
 package com.github.iaccidentally.ecm;
 
+import com.github.iaccidentally.ecm.commands.Util;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import com.github.iaccidentally.ecm.commands.*;
 
 /**
  *
@@ -41,7 +40,7 @@ public class CommandManager {
         // Parse the commands
         if(args[0].equalsIgnoreCase("adduser"))
         {
-            Commandadduser.addUser(player, args[1]);
+            
         }
         else if(args[0].equalsIgnoreCase("copy"))
         {
@@ -108,6 +107,5 @@ public class CommandManager {
     
     public static void setLocation(Location newLoc, int id) {
         loc[id] = newLoc;
-        return;
     }
 }
