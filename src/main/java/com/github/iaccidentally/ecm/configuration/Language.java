@@ -9,5 +9,9 @@ package com.github.iaccidentally.ecm.configuration;
  * @author gavincasdorph
  */
 public class Language {
+
+    public static String getString(String generaltitle) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
     
 }
