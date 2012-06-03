@@ -33,8 +33,9 @@ public class Chat {
 	public static ChatColor italic = ChatColor.ITALIC;
 	public static ChatColor reset = ChatColor.RESET;
 
-	//I think we should use this format for messages! This way all will look ~ the same!
-	
+	// I think we should use this format for messages! This way all will look ~
+	// the same!
+
 	public void errorMessage(Player player, String message) {
 		if (message == null) {
 			String error = aqua + "[ECM " + underline + "Error" + aqua + "]"
@@ -56,6 +57,30 @@ public class Chat {
 			String finished = aqua + "[ " + bold + " ECM " + aqua + "] "
 					+ message;
 			player.sendRawMessage(finished);
+		}
+	}
+
+	public void messageFormat(Player player, String type) {
+		String MessageType = CommandManager.getPlugin().getConfig()
+				.getString(type);
+		if (MessageType.contains("&0") || MessageType.contains("&1")
+				|| MessageType.contains("&2") || MessageType.contains("&3")
+				|| MessageType.contains("&4") || MessageType.contains("&5")
+				|| MessageType.contains("&6") || MessageType.contains("&7")
+				|| MessageType.contains("&8") || MessageType.contains("&a")
+				|| MessageType.contains("&b") || MessageType.contains("&c")
+				|| MessageType.contains("&d") || MessageType.contains("&e")
+				|| MessageType.contains("&f") || MessageType.contains("&r")
+				|| MessageType.contains("&k") || MessageType.contains("&o")
+				|| MessageType.contains("&n") || MessageType.contains("&m")
+				|| MessageType.contains("&l")) {
+			
+			
+			/*
+			 *  Someone else need to make the replacer.
+			 *  I cant, I'm color blind.
+			 *  Use this: http://wiki.ess3.net/mc/
+			 */
 		}
 	}
 
