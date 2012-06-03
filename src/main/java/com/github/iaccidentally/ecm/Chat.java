@@ -75,13 +75,12 @@ public class Chat {
 				|| MessageType.contains("&n") || MessageType.contains("&m")
 				|| MessageType.contains("&l")) {
 			
+			//do more of this!
 			
-			/*
-			 *  Someone else need to make the replacer.
-			 *  I cant, I'm color blind.
-			 *  Use this: http://wiki.ess3.net/mc/
-			 */
+			MessageType.replace("&0", black.toString()).replace("&1", blue.toString()).replace("&2", dark_green.toString()).replace("&3", aqua.toString()).replace("&4", red.toString()).replace("&5", light_purple.toString()).replace("&6", "").replace("&7", gray.toString()).replace("&8", dark_grey.toString()).replace("&9", dark_aqua.toString()).replace("&a", green.toString()).replace("&b", blue.toString());
+			
+			
+			
 		}
 	}
-
 }
