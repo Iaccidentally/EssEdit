@@ -33,8 +33,14 @@ public class Chat {
 	public static ChatColor italic = ChatColor.ITALIC;
 	public static ChatColor reset = ChatColor.RESET;
 
-	//I think we should use this format for messages! This way all will look ~ the same!
-	
+	/*
+	 * I think we should use this format for messages! This way all will look
+	 * ~the same!
+	 */
+
+	/*
+	 * @param Player player and a Message in a string
+	 */
 	public void errorMessage(Player player, String message) {
 		if (message == null) {
 			String error = aqua + "[ECM " + underline + "Error" + aqua + "]"
@@ -47,6 +53,9 @@ public class Chat {
 		}
 	}
 
+	/*
+	 * @param Player player and a Message in a string
+	 */
 	public void finishMessage(Player player, String message) {
 		if (message == null) {
 			String finished = aqua + "[ " + bold + " ECM " + aqua + "] "
@@ -59,4 +68,14 @@ public class Chat {
 		}
 	}
 
+	public void configMadeMessage(Player player, String type, String message) {
+		String MessageFormat = CommandManager.getPlugin().getConfig().getString(type);
+		MessageFormat = MessageFormat.replace("[black]", black.toString()).replace("[dark_blue]", dark_blue.toString()).replace("[dark_green]", dark_green.toString()).replace("[dark_aqua]", dark_aqua.toString()).replace("[dark_red]", dark_red.toString()).replace("[dark_purple]", dark_purple.toString()).replace("[gold]", gold.toString()).replace("[gray]", gray.toString()).replace("[dark_grey]", dark_grey.toString()).replace("[blue]", blue.toString()).replace("[green]", green.toString()).replace("[aqua]", aqua.toString()).replace("[red]", red.toString()).replace("[light_purple]", light_purple.toString()).replace("[yellow]", yellow.toString()).replace("[white]", white.toString()).replace("[magic]", magic.toString()).replace("[bold]", bold.toString()).replace("[strike]", strike.toString()).replace("[underline]", underline.toString()).replace("[italic]", italic.toString());
+		if (message != "noUse") {
+			player.sendMessage(MessageFormat + message);
+		} else {
+			player.sendMessage(MessageFormat);
+		}
+
+	}
 }

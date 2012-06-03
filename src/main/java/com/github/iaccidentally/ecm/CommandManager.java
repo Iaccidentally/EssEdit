@@ -21,7 +21,8 @@ public class CommandManager {
     
     private static Location[] loc = {null, null};
 
-    public static void setLocation(JavaFileManager.Location loc, int i) {
+    @SuppressWarnings("restriction")
+	public static void setLocation(JavaFileManager.Location loc, int i) {
         throw new UnsupportedOperationException("Not yet implemented");
     }
     
@@ -37,13 +38,17 @@ public class CommandManager {
         CommandManager.sender = sender;
         
         Player player = null;
-        if(Util.isPlayer());
-        {
+        if (Util.isPlayer()) {
             player = (Player) sender;
+        } else if (cmd.equals("adduser") || args[0].equals("reload")){
+        	sender.sendMessage("You are not a player! You can only use the reload and adduser commands!");
+        } else {
+        	return false;
         }
+        	
         
         // Parse the commands
-        if(args[0].equalsIgnoreCase("adduser"))
+        if (args[0].equalsIgnoreCase("adduser"))
         {
             
         }
